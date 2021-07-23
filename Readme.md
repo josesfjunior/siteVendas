@@ -4,7 +4,7 @@ Usando React, Express e o MongoDB
 ## Para Usar o projeto Você vai precisar ter o Docker instlado
 
 ### Iniciando:
-No diertorio raz do projeto (loja) execute o comando 
+No diertorio raiz do projeto execute o comando 
 
 Linux: `docker-compose up` <br>
 Wndows: `docker compose up`<br>

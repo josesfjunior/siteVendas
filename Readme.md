@@ -22,6 +22,8 @@ Mongo:     <a>localhost:27018</a>
 <br>
 Para parar é só usar o comando:
 <br>
+
 Linux: `docker-compose down` <br>
 Wndows: `docker compose down`<br>
+
 <br>

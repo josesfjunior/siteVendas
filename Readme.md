@@ -1,9 +1,11 @@
 # Projeto de um site de vendas 
 Usando React, Express e o MongoDB
 
-## Para Usar o projeto Você vai precisar ter o Docker instlado
+## Para Usar o projeto Você vai precisar ter o Docker instalado
 
 ### Iniciando:
+Na pasta loja-front e server instale os packege.json.
+
 No diertorio raiz do projeto execute o comando:
 
 Linux: `docker-compose up` <br>
@@ -15,6 +17,7 @@ o (-d) pode ser uma opção para rodar o projeto em Background.
 O Docker Compose vai configurar tudo automaticamente
 
 <br>
+
 
 Front-end: <a>localhost:3001</a><br>
 Express:   <a>localhost:2020</a><br>

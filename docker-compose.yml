@@ -4,9 +4,9 @@ services:
     build: ./loja-front
     image: node-react
     ports:
-        - 3001:3000
+      - 3001:3000
     volumes:
-        - ./loja-front:/home/front/
+      - ./loja-front:/home/front/
   Express:
     build: ./server
     image: node-express
@@ -15,9 +15,9 @@ services:
     volumes:
       - ./server:/home/back
 
-  Mongo-DB:
+  db:
     image: mongo
-    ports: 
+    ports:
       - 27018:27017
     volumes:
-      - ./data:/data/db  
+      - ./data:/data/db

@@ -8,6 +8,8 @@ RUN npm -g install npm@latest
 
 RUN npm install
 
+COPY . .
+
 CMD ["npm", "run", "dev"]
 
 EXPOSE 2020

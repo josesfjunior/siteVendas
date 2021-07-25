@@ -1,9 +1,14 @@
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27018/teste", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-});
+mongoose
+  .connect("mongodb://db:27017/teste", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  })
+  .then((result) => {
+    console.log("Db conectado");
+  })
+  .catch((err) => console.log(err));
 
-mongoose.Promise = global.Promise
-module.exports = mongoose
+mongoose.Promise = global.Promise;
+module.exports = mongoose;

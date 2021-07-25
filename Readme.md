@@ -4,10 +4,10 @@ Usando React, Express e o MongoDB
 ## Para Usar o projeto Você vai precisar ter o Docker instalado
 
 ### Iniciando:
-Na pasta loja-front e server instale os packege.json.
 
-No diertorio raiz do projeto execute o comando:
+No diertorio raiz do projeto execute os comandos:
 
+`npm run dep`<br>
 Linux: `docker-compose up` <br>
 Wndows: `docker compose up`<br>
 <br>

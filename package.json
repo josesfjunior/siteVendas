@@ -1,0 +1,24 @@
+{
+  "name": "pro",
+  "version": "1.0.0",
+  "description": "Usando React, Express e o MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "dep": "cd loja-front && npm i &&  cd .. && cd server && npm i "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josesfjunior/siteVendas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josesfjunior/siteVendas/issues"
+  },
+  "homepage": "https://github.com/josesfjunior/siteVendas#readme",
+  "dependencies": {
+    "loja-front": "file:loja-front",
+    "server": "file:server"
+  }
+}

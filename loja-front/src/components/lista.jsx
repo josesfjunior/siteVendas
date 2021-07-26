@@ -1,10 +1,20 @@
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "../layouts/lista.css";
 
-function lista(props) {
-  const objeto = props.objeto;
+function Lista() {
+  const [dados, setDados] = useState([]);
+  useEffect(() => {
+    const Trazer = async () => {
+      const info = await axios.get("http://localhost:2020/cadastroProd");
+      await setDados(info.data);
+      console.log(info.data);
+    };
+    Trazer();
+  }, []);
   return (
     <div className="card-items">
-      {objeto.map((items) => {
+      {dados.map((items) => {
         return (
           <div key={items._id} className="item-unico">
             <ul>
@@ -30,4 +40,4 @@ function lista(props) {
   );
 }
 
-export default lista;
+export default Lista;

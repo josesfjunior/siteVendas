@@ -5,7 +5,7 @@ export default function Login() {
     <div className="container">
       <h1>Entre</h1>
       <div className="inputs">
-        <label>Usuario:</label>
+        <label>Email:</label>
         <input type="email"></input>
       </div>
       <div className="inputs">

@@ -1,18 +1,28 @@
 import { useState } from "react";
 import "../layouts/cadastro.css";
 import axios from "axios";
+import FormValidation from "../validation";
+
 export default function Cadastro() {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
-  const [senha, setSenha] = useState("");
+  const [senha, setSenha] = useState(false);
+  const [status, setStatus] = useState(false);
 
-  const Enviar = async () => {
+  const Validar = () => {
     const post = {
       nome: nome,
       email: email,
       senha: senha,
     };
-    await axios.post("http://localhost:2020/cadastroUser", post);
+    FormValidation.isValid(post)
+      .then((valido) => {
+        axios.post("http://localhost:2020/cadastroUser", post);
+        setStatus(valido);
+      })
+      .catch((err) => {
+        console.log(`Deu erro`);
+      });
   };
 
   return (
@@ -39,7 +49,8 @@ export default function Cadastro() {
           onChange={({ ...e }) => setSenha(e.target.value)}
         ></input>
       </div>
-      <button onClick={Enviar}>Enviar</button>
+      <label>{status === true ? "sucesso" : ""}</label>
+      <button onClick={Validar}>Enviar</button>
     </div>
   );
 }

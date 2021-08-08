@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../connection/schema/User')
+const User = require('../schema/User')
 
 router.get("/", async(req, res) => {
     const user = await User.find({})

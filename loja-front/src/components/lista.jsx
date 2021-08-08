@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "../layouts/lista.css";
+
 
 function Lista() {
   const [dados, setDados] = useState([]);
@@ -8,7 +8,7 @@ function Lista() {
     const Trazer = async () => {
       const info = await axios.get("http://localhost:2020/cadastroProd");
       await setDados(info.data);
-      console.log(info.data);
+      
     };
     Trazer();
   }, []);

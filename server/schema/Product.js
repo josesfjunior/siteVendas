@@ -1,4 +1,4 @@
-const mongoose = require('../mongo')
+const mongoose = require('../connection/mongo')
 
 
 const ProductSchema= new mongoose.Schema({
@@ -6,12 +6,12 @@ const ProductSchema= new mongoose.Schema({
         type: String,
         required: true
     },
-    email:{
+    imagem:{
         type: String,
         unique: true,
         required: true,
     },
-    senha: {
+    preco: {
         type: String,
         required: true
     },
@@ -21,6 +21,6 @@ const ProductSchema= new mongoose.Schema({
     }
 })
 
-const Product = mongoose.model('User', ProductSchema)
+const Product = mongoose.model('Product', ProductSchema)
 
 module.exports= Product

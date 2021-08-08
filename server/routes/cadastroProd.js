@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Product = require("../connection/schema/Product");
+const Product = require("../schema/Product");
 
 router.get("/", async (req, res) => {
     const dados = await Product.find({})
